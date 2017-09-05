@@ -1,5 +1,11 @@
-from escpos.printer import Usb
+from service.messageService import MessageService
+from network.network_layer import NetworkLayer
+
 
 if __name__ == "__main__":
-    printer = Usb(0x0416, 0x5011)
-    printer.text("Hello world!")
+
+    network_layer = NetworkLayer(endpoint="https://booboomessenger.herokuapp.com/")
+    service = MessageService(network_layer=network_layer)
+
+    all_messages = service.get_messages()
+    service.mark_message_as_printed(all_messages[0])

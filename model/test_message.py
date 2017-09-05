@@ -2,6 +2,7 @@ from unittest import TestCase
 from model.message import Message
 from model.error import MissingKeyError
 
+
 class TestMessage(TestCase):
 
     def test_should_deserialize(self):

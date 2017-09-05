@@ -1,5 +1,5 @@
 from service.messageService import MessageService
-from network.network_layer import NetworkLayer
+from network.networkLayer import NetworkLayer
 from printer.printer import Printer
 
 if __name__ == "__main__":

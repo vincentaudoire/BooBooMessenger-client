@@ -16,4 +16,4 @@ class NetworkLayer:
     def put(self, path):
         url = urllib.parse.urljoin(self.endpoint, path)
         request = urllib.request.Request(url=url, method="PUT")
-        return json.loads(urllib.request.urlopen(request).read().decode())
+        urllib.request.urlopen(request).read().decode()

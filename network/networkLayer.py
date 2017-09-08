@@ -3,7 +3,16 @@ import urllib.request
 import json
 
 
-class NetworkLayer:
+class AbstractNetworkLayer:
+
+    def get(self, path):
+        pass
+
+    def put(self, path):
+        pass
+
+
+class NetworkLayer(AbstractNetworkLayer):
 
     def __init__(self, endpoint):
         self.endpoint = endpoint

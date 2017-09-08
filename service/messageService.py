@@ -14,4 +14,3 @@ class MessageService:
     def mark_message_as_printed(self, message):
         path = "/messages/" + message.id + "/printed"
         self.network_layer.put(path)
-

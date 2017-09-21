@@ -8,7 +8,7 @@ class BooBooMessenger:
 
     FETCHING_TIME = 120  # Fetch an print messages every x seconds
     PRINTER_VENDOR = 0x0416
-    PRINTER_PRODUCT = 0x5001
+    PRINTER_PRODUCT = 0x5011
 
     def __init__(self):
         self.printer = Printer(Address(id_vendor=self.PRINTER_VENDOR, id_product=self.PRINTER_PRODUCT))
